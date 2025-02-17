@@ -26,8 +26,9 @@ class OmniExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
+      body: Center(child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
               onPressed: () async {
@@ -39,6 +40,7 @@ class OmniExample extends StatelessWidget {
               },
               child: const Text('Show DateTime Picker'),
             ),
+            const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () async {
                 final List<DateTime>? dateTime =
@@ -50,8 +52,7 @@ class OmniExample extends StatelessWidget {
               child: const Text('Show DateTime Picker'),
             ),
           ],
-        ),
-      ),
+        ))
     );
   }
 }
