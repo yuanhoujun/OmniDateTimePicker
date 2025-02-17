@@ -55,3 +55,9 @@ class OmniExample extends StatelessWidget {
     );
   }
 }
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  runApp(MyApp());
+}
